@@ -17,10 +17,10 @@ No refactoring needed.
 
 ## Features
 
-### Focus on writing code - not organising code
+### Focus on writing code – not organising code
 Build your application out of actions, small functions with a specific responsibility.
 Move your actions about the project as development progresses without having to  wory about having to refactor.
-Use namespaces to oranise your actions, and rest save in the knowledge that they will always return a promise.
+Use namespaces to organise your actions, and rest save in the knowledge that they will always return a promise.
 
 ### Extend it in any way you like
 At less than a 100 lines of actual code, the main library is tiny and we aim to keep it that way.

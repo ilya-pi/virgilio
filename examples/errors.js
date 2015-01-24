@@ -15,3 +15,14 @@ virgilio.registerError$(function DivideByZeroError(number) {
 var divideByZeroError = new virgilio.DivideByZeroError(5);
 console.log(divideByZeroError.message);         //=> 'Can`t divide 5 by zero.'
 console.log(divideByZeroError.failingNumber);   //=> 5
+
+//Testing chain errors definition
+virgilio
+    .registerError$('BananaError')
+    .registerError$('BananaBananaError');
+var bananaError = new virgilio.BananaError('banana!');
+var bananaBananaError = new virgilio.BananaBananaError('banana!banana!');
+console.log(bananaError.name);      //=> 'BananaError'
+console.log(bananaError.message);   //=> 'banana!'
+console.log(bananaBananaError.name);      //=> 'BananaBananaError'
+console.log(bananaBananaError.message);   //=> 'banana!banana!'
